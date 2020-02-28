@@ -1,6 +1,6 @@
 #include <iostream>
 
-#if 1 // r-value reference as function parameters
+#if 0 // r-value reference as function parameters
 
 void fun(const int &lref) // l-value arguments will select this function
 {
@@ -47,7 +47,7 @@ int main()
 #endif
 
 
-#if 0
+#if 1
 
 class Fraction
 {
