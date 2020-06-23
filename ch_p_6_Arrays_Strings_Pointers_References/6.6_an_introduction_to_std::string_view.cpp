@@ -9,6 +9,127 @@
  * 
  */
 
+
+
+#include <iostream>
+#include <iterator> // for std::size
+#include <string>
+#include <string_view>
+
+#if 1
+
+std::string_view askForName()
+{
+    std::cout << "What's your name? \n";
+
+    std::string str{};
+    std::cin >> str;
+
+    std::string_view view {str};
+    std::cout << "Hello " << view << '\n';
+
+    return view;
+}
+
+int main()
+{
+    std::string_view view {askForName()};
+
+    std::cout << "Your name is " << view << '\n';
+
+    return 0;
+}
+
+#endif
+
+#if 0
+
+int main()
+{
+    char vowels[] {'a','e','i','o','u'};
+
+    std::string_view str {vowels, std::size(vowels)};
+    std::cout << str << '\n';
+
+    return 0;
+}
+
+#endif
+
+#if 0
+
+int main()
+{
+    std::string_view str {"Peach"};
+    std::cout << str << '\n';
+
+    str.remove_prefix(1);
+    std::cout << str << '\n';
+
+    str.remove_suffix(2);
+    std::cout << str << '\n';
+
+    return 0;
+}
+
+#endif
+
+#if 0
+
+int main()
+{
+    char arr[] {"Gold"};
+    std::string_view str {arr};
+    std::cout << str << '\n';
+
+    arr[3] = 'f';
+    std::cout << str << '\n';
+
+    return 0;
+}
+#endif
+
+#if 0
+
+int main()
+{
+    std::string_view str {"Trains are fast!"};
+
+    std::cout << str.length() << '\n';
+    std::cout << str.substr(0, str.find(' ')) << '\n';
+    std::cout << (str == "Trains are fast!") << '\n';
+
+    return 0;
+}
+
+#endif
+
+#if 0
+
+#include <iostream>
+#include <string>
+#include <string_view>
+
+int main()
+{
+    // char text[] {"hello"};
+    // std::string str {text};
+    // std::string more {str};
+
+    std::string_view text {"hello"};
+    std::string_view str {text};
+    std::string_view more {str};
+
+    std::cout << text << ' ' << str << ' ' << more << '\n';
+
+    return 0;
+}
+
+#endif
+
+
+#if 0
+
 #include <iostream>
 #include <string>
 #include <string_view>
@@ -99,3 +220,5 @@ int main()
 
     return 0;
 }
+
+#endif
